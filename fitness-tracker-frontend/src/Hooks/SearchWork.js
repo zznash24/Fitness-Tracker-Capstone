@@ -8,9 +8,12 @@ const startSearchTerms = {
 export default search => {
     const [result, setResult] = useState([]);
     const [searchTags, setSearchTags] = useState(startSearchTerms);
+    const [show, setShow] = useState(false);
     
     const handleSubmitFunc = (valuesParam, searchType, searchParam) => { 
+
             setShow(true)
+
         const options = {
             method: 'GET',
             url: `https://exercisedb.p.rapidapi.com/exercises/${searchType}/${searchParam}`,
@@ -21,6 +24,7 @@ export default search => {
         };
         
         if (valuesParam.searchTerm !== ""){
+            
             return fetch(options)
 	        .then(function (response) {
                 setResult(response.data); 

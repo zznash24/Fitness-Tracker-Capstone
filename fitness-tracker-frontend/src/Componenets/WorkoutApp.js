@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import WorkSearch from './WorkSearch';
+import searchTerms from '../Hooks/searchTerms';
 import SearchWork from '../Hooks/SearchWork';
 import Listresult from "./resultList";
 import PageN from './Pages';
+
 
 
 function WorkoutApp() {
@@ -13,8 +15,6 @@ function WorkoutApp() {
     const indexOfLastItem = page * itemsPerPage;
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
     const currentResults = result.slice(indexOfFirstItem, indexOfLastItem);
-
-    const resultList = <Listresult data={currentResults} searchTags={searchTags} numResults={result.length} />;
     let pagination;
 
 
@@ -26,6 +26,7 @@ function WorkoutApp() {
         pagination = <PageN itemsPerPage={itemsPerPage} totalItems={result.length} page={page} setPage={setPage} />
       }
 
+      const resultList = <Listresult data={currentResults} searchTags={searchTags} numResults={result.length} />;
 return (
     <div>
         <WorkSearch

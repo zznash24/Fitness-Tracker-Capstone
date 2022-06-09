@@ -7,6 +7,7 @@ import Select from '@mui/material/Select';
 import Paper from '@mui/material/Paper'
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import '../styles/WorkSearch.css';
 
 
 function WorkoutSearch(props) {
@@ -16,7 +17,7 @@ function WorkoutSearch(props) {
                 <b>Search for a workout by muscle or equipment or by exercise</b>
             </Typography>
             <form>
-                <FormControl>
+                <FormControl sx={{ width: '75%' }}>
                     <InputLabel>Search By</InputLabel>
                     <Select id='searchBy' name="searchBy" label="Workout Search" value={props.values.searchBy} onChange={props.handleChange}>
                         <MenuItem value="name">Exercise Name</MenuItem>
@@ -24,7 +25,10 @@ function WorkoutSearch(props) {
                         <MenuItem value="equipment">Equipment</MenuItem>
                     </Select>
                 </FormControl>
+                <FormControl margin="normal" sx={{ width: '75%' }}>
                 <TextField value={props.values.searchTerm} onChange={props.handleChange} name="searchTerm" label="Search" />
+                </FormControl>
+                <br />
                 <Button type="submit" onClick={(event) => {
                     event.preventDefault();
                     props.handleSubmit(props.values, props.searchByHolder, props.searchTermHolder);
