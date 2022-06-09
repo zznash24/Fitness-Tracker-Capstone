@@ -10,7 +10,7 @@ export default search => {
     const [searchTags, setSearchTags] = useState(startSearchTerms);
     
     const handleSubmitFunc = (valuesParam, searchType, searchParam) => { 
-
+            setShow(true)
         const options = {
             method: 'GET',
             url: `https://exercisedb.p.rapidapi.com/exercises/${searchType}/${searchParam}`,
