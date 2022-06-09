@@ -12,11 +12,16 @@ function WorkoutApp() {
     const [result, searchTags, show, handleSubmitFunc] = SearchWork();
     const [itemsPerPage] = useState(5);
     const [page, setPage] = React.useState(1);
+
     const indexOfLastItem = page * itemsPerPage;
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+    console.log(result, indexOfLastItem, indexOfFirstItem);
+
     const currentResults = result.slice(indexOfFirstItem, indexOfLastItem);
     let pagination;
 
+
+    
 
     if (!show) {
         pagination = null;
