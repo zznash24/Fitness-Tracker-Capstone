@@ -17,9 +17,6 @@ module.exports = {
       gitURL: {
         type: Sequelize.STRING
       },
-      id: {
-        type: Sequelize.STRING
-      },
       name: {
         type: Sequelize.STRING
       },

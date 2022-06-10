@@ -39,9 +39,7 @@ export default search => {
             
 	        .catch(err => console.error('error:' + err));
     }
-  };
+  
 
   return [result, searchTags, handleSubmitFunc];
-}
-
-export default SearchWork;
+  };
