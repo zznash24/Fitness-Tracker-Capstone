@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { styled } from "@mui/material/styles";
+import IconButton from "@mui/material/IconButton";
 import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
 import CardMedia from "@mui/material/CardMedia";
@@ -10,6 +12,17 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 
+const ExpandMore = styled((props) => {
+  const { expand, ...other } = props;
+  return <IconButton {...other} />;
+})(({ theme, expand }) => ({
+  transform: !expand ? "rotate(0deg)" : "rotate(180deg)",
+  marginLeft: "auto",
+  transition: theme.transitions.create("transform", {
+    duration: theme.transitions.duration.shortest
+  })
+}));
+
 
 function Results(props) {
   const [expanded, setExpanded] = React.useState(false);
@@ -20,7 +33,7 @@ function Results(props) {
   }
   
   return (
-    <li>
+    <li id={props.data.id}>
       <Card>
         <CardActions>
           <CardHeader
