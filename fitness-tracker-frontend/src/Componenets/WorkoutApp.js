@@ -45,7 +45,7 @@ return (
         </div>
         {pagination}
     </div>
-)
+  );
 }
 
 export default WorkoutApp;

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
 const startSearchTerms = {
-    searchTerm: "",
-    searchBy: ""
+  searchTerm: "",
+  searchBy: "",
 };
 
 export default search => {
@@ -38,8 +38,10 @@ export default search => {
                 console.log(json)})
             
 	        .catch(err => console.error('error:' + err));
-
     }
- 
-    return [result, searchTags, show, handleSubmitFunc];
+  };
+
+  return [result, searchTags, handleSubmitFunc];
 }
+
+export default SearchWork;
