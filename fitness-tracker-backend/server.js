@@ -7,7 +7,7 @@ const db = require('./models');
 const app = express();
 
 
-const app = express();
+
 const models = require('./models');
 const exercise = require('./models/exercises');
 
