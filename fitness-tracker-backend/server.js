@@ -7,9 +7,9 @@ const db = require('./models');
 const app = express();
 
 
-const app = express();
+
 const models = require('./models');
-const exercise = require('./models/exercise');
+const exercise = require('./models/exercises');
 
 app.use(cors())
 

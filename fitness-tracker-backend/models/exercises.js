@@ -20,7 +20,6 @@ module.exports = (sequelize, DataTypes) => {
     bodyPart: DataTypes.STRING,
     equipment: DataTypes.STRING,
     gitURL: DataTypes.STRING,
-    id: DataTypes.STRING,
     name: DataTypes.STRING,
     target: DataTypes.STRING
   }, {
