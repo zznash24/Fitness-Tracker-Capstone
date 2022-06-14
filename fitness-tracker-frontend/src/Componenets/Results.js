@@ -51,16 +51,20 @@ function Results(props) {
         </CardActions>
         <Collapse in={expanded}>
           <CardContent>
-            <CardMedia component="img"
+            <div className='card-img'>
+              <CardMedia component="img"
               image={props.data.gifUrl}>
-            </CardMedia>
+              </CardMedia>
+            </div>
+            <div className="card-text">
             <Typography><b>Target muscle:</b> {props.data.target}</Typography>
             <Typography><b>Body part used:</b> {props.data.bodyPart}</Typography>
             <Typography><b>Equipment required:</b> {props.data.equipment}</Typography>
             <Box>
-              {<Button variant="contained">Add this to WorkOut!</Button>}
-              {<Button  variant="outlined">💙</Button>}
+              {<Button variant="outlined">Add this to WorkOut!</Button>}
+              {<Button variant="outlined">💙</Button>}
             </Box>
+            </div>
           </CardContent>
         </Collapse>
       </Card>
