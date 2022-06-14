@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+/* eslint-disable import/no-anonymous-default-export */
+import { useState } from "react";
 
 const startSearchTerms = {
   searchTerm: "",
@@ -43,3 +44,4 @@ export default search => {
 
   return [result, searchTags, show, handleSubmitFunc];
 }
+
