@@ -43,3 +43,4 @@ export default search => {
 
   return [result, searchTags, show, handleSubmitFunc];
 }
+
