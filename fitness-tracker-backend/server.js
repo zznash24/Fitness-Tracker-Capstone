@@ -21,19 +21,19 @@ app.use(cors())
 
 app.post('/login', async (req, res) => {
 
-    const { email, password } = req.body;
+    const { username, password } = req.body;
     
       models.User.findOne({
-        where: { email: email }
+        where: { username: username }
       }).then((user) => {
         if (!user) {
-          res.json({ error: 'no user with that email was found' })
+          res.json({ error: 'no user was found' })
           return;
         }
     
         bcrypt.compare(password, user.password, (err, match) => {
           if (match) {
-            res.json({ email: user.firstName, success: true })
+            res.json({ email: user.username, success: true })
             // res.redirect('/')
           } else {
             res.json({ error: 'incorrect password' })
@@ -46,19 +46,21 @@ app.post('/login', async (req, res) => {
 
 app.post('/signup', (req, res) => {
 
-    const { firstName, lastName, email, password } = req.body;
+    const { username, firstName, lastName, email, password } = req.body;
     
-        if (!firstName || !lastName || !email || !password) {
+        if (!username || !firstName || !lastName || !email || !password) {
         res.json({ error: 'First Name, Last Name, Email, and Password required.' })
         return;
       }
+    console.log(username)  
     console.log(firstName)
     console.log(lastName)
     console.log(email)
     console.log(password)
     
       bcrypt.hash(password, 5, (err, hash) => {
-        models.User.create({
+        models.user.create({
+          username: username,
           firstName: firstName,
           lastName: lastName,
           email: email,
