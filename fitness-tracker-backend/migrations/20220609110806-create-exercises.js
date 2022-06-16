@@ -14,7 +14,7 @@ module.exports = {
       equipment: {
         type: Sequelize.STRING
       },
-      gitURL: {
+      gifURL: {
         type: Sequelize.STRING
       },
       name: {
