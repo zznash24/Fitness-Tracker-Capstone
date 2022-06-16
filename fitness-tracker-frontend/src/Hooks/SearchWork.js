@@ -5,7 +5,7 @@ const startSearchTerms = {
   searchBy: "",
 };
 
-export default search => {
+function SearchWork() {
     const [result, setResult] = useState([]);
     const [searchTags, setSearchTags] = useState(startSearchTerms);
     const [show, setShow] = useState(false);
@@ -44,3 +44,4 @@ export default search => {
   return [result, searchTags, show, handleSubmitFunc];
 }
 
+export default SearchWork;

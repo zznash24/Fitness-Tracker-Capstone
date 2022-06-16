@@ -11,7 +11,6 @@ import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
-import Icon from '@mui/material/Icon';
 import "../styles/Results.css";
 
 const ExpandMore = styled((props) => {
