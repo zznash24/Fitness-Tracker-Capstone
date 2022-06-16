@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 import { useState, useEffect } from "react";
 import Exercises from "./Exercises";
 import { Link } from "react-router-dom";
