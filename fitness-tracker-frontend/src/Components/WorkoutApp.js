@@ -4,6 +4,8 @@ import searchTerms from '../Hooks/searchTerms';
 import SearchWork from '../Hooks/SearchWork';
 import Listresult from "./resultList";
 import PageN from './Pages';
+import Footer from './Footer';
+import '../styles/WorkoutApp.css';
 
 
 
@@ -43,7 +45,9 @@ return (
         <div>
             {resultList}
         </div>
+        <hr />
         {pagination}
+        <Footer />
     </div>
   );
 }

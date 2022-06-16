@@ -29,7 +29,7 @@ function WorkoutSearch(props) {
                 <TextField value={props.values.searchTerm} onChange={props.handleChange} name="searchTerm" label="Search" />
                 </FormControl>
                 <br />
-                <Button type="submit" onClick={(event) => {
+                <Button className='sub-button' type="submit" variant='outlined' onClick={(event) => {
                     event.preventDefault();
                     props.handleSubmit(props.values, props.searchByHolder, props.searchTermHolder);
                 }}>Submit</Button>

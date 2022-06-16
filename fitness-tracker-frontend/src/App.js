@@ -1,21 +1,20 @@
 import './App.css';
 import WorkoutApp from './Componenets/WorkoutApp';
 import Grid from '@mui/material/Grid';
+import Header from './Componenets/Header';
 
 function App() {
-  
-
 
   return (
 
     <div className="App">
       <header className="App-header">
-        <h1>The Workout Zone</h1>
+        <Header />
       </header>
 
 
-      <Grid>
-      <WorkoutApp />
+      <Grid className='body-grid'>
+        <WorkoutApp />
       </Grid>
 
 
