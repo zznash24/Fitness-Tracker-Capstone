@@ -1,7 +1,7 @@
 import './App.css';
-import WorkoutApp from './Componenets/WorkoutApp';
+import WorkoutApp from './Components/WorkoutApp';
 import Grid from '@mui/material/Grid';
-import Header from './Componenets/Header';
+import Header from './Components/Header';
 
 function App() {
 
