@@ -3,3 +3,8 @@
   background-size: cover;
   height: 100vh;
 } */
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+}
