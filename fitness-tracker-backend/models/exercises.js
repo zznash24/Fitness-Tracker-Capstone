@@ -19,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
   exercises.init({
     bodyPart: DataTypes.STRING,
     equipment: DataTypes.STRING,
-    gitURL: DataTypes.STRING,
+    gifURL: DataTypes.STRING,
     name: DataTypes.STRING,
     target: DataTypes.STRING
   }, {

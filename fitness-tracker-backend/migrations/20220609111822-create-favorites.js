@@ -9,10 +9,18 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       userId: {
-        type: Sequelize.STRING
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'users',
+          key: 'id',
+        }
       },
       exerciseId: {
-        type: Sequelize.STRING
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'exercises',
+          key: 'id',
+        }
       },
       createdAt: {
         allowNull: false,
