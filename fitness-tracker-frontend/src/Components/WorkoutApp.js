@@ -4,13 +4,15 @@ import searchTerms from '../Hooks/searchTerms';
 import SearchWork from '../Hooks/SearchWork';
 import Listresult from "./resultList";
 import PageN from './Pages';
+import Footer from './Footer';
+import '../styles/WorkoutApp.css';
 
 
 
 function WorkoutApp() {
     const [values, searchByInputHolder, searchInputTerm, handleChangeFunc] = searchTerms();
     const [result, searchTags, show, handleSubmitFunc] = SearchWork();
-    const [itemsPerPage] = useState(5);
+    const [itemsPerPage] = useState(6);
     const [page, setPage] = React.useState(1);
 
     const indexOfLastItem = page * itemsPerPage;
@@ -40,10 +42,12 @@ return (
               searchByInputHolder={searchByInputHolder}
               searchInputTerm={searchInputTerm}
               values={values} />
-        <div>
+        <div className='cards' container spacing={3}>
             {resultList}
         </div>
+        <hr />
         {pagination}
+        <Footer />
     </div>
   );
 }
