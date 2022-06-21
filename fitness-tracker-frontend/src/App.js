@@ -2,6 +2,7 @@ import './App.css';
 import WorkoutApp from './Components/WorkoutApp';
 import Grid from '@mui/material/Grid';
 import Header from './Components/Header';
+import Container from '@mui/material/Container';
 
 function App() {
 
@@ -12,10 +13,11 @@ function App() {
         <Header />
       </header>
 
-
+    <Container>
       <Grid className='body-grid'>
         <WorkoutApp />
       </Grid>
+    </Container>
 
 
     </div>

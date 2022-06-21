@@ -26,7 +26,7 @@ const SavedExercises = () => {
   };
 
   useEffect(() => {
-    fetch("http://localhost:3001/food")
+    fetch("http://localhost:3001/exercise")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
