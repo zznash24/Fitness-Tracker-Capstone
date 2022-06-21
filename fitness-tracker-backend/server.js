@@ -1,12 +1,14 @@
 const PORT = process.env.PORT || 3001;
-const express = require("express");
-const cors = require("cors");
-const bcrypt = require("bcrypt");
-const db = require("./models");
+const express = require('express');
+const cors = require('cors')
+const bcrypt = require('bcrypt');
 const app = express();
 
-const models = require("./models");
-const exercise = require("./models/exercises");
+
+
+const models = require('./models');
+const exercise = require('./models/exercises');
+
 
 app.use(express.json());
 app.use(cors());
