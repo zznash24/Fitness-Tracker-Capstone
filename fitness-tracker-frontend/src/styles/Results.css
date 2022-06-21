@@ -1,4 +1,4 @@
-#Fav-Icon {
+/* #Fav-Icon {
     justify-content: center;
     align-content: center;
 }
@@ -11,4 +11,8 @@
 
 .card-text {
     text-align: left;
+} */
+
+.card-res {
+    display: flex;
 }
