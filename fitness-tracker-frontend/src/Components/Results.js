@@ -15,7 +15,7 @@ function Results(props) {
     <ul id={props.data.id} className='card-res'>
       <Card sx={{ maxWidth: 250 }} variant="outlined" elevation={5}>
 
-        <CardHeader variant="h5" component="div" title={props.data.name} />
+        <CardHeader variant="h4" component="div" title={props.data.name} />
 
         <CardMedia component="img"
           image={props.data.gifUrl} >
