@@ -8,6 +8,7 @@ const app = express();
 
 const models = require('./models');
 const exercise = require('./models/exercises');
+const db = require('./models');
 
 
 app.use(express.json());
@@ -132,6 +133,19 @@ app.post(
       });
   }
 );
+
+app.delete('/favorites/:favorites_id', async (req, res) => {
+  const favorites_id = parseInt(req.params.favorites_id);
+  let favorites = await db.Favorites.findOne({where: {id:favorites_id}}).catch(e => {
+    console.log(e.message)
+  })
+  if(!favorites){
+    console.log('no favorites found');
+  }else {
+    favorites.destroy();
+    res.send('favorite deleted')
+  }
+})
 
 
 
