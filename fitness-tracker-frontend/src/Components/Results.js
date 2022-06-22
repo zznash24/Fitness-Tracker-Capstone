@@ -49,7 +49,7 @@ function Results(props) {
           </CardContent>
         
         < CardActions >
-          {< Button variant="outlined" sx={{ width: '75%' }}>💙</Button>}
+          {< Button variant="outlined" sx={{ width: '100%' }}>💙</Button>}
         </CardActions>
       </Card>
     </ul>
