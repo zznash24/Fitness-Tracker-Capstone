@@ -16,9 +16,11 @@ import "../styles/Results.css";
 
 
 
+
 function Results(props) {  
 const [exerciseId, setExerciseId] = React.useState(null);
  
+
 
   const handleFavoritesClick = async () => {
     alert("hi");
@@ -67,6 +69,13 @@ const [exerciseId, setExerciseId] = React.useState(null);
           });
       });
   };
+
+
+  // have access to the workout data. have access to user id.
+  // hardcode for now but hook up with login
+  // call the addExercise route (need a body with the workout data)
+  // upon success, then call the addToFavorites route (exercise id from the call above plus the userId)
+
 
   return (
     <li id={props.data.id} className='card-res'>
