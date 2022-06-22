@@ -1,46 +1,26 @@
 import React, { useState } from "react";
-import { styled } from "@mui/material/styles";
-import IconButton from "@mui/material/IconButton";
 import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
 import CardActions from "@mui/material/CardActions";
-import Collapse from "@mui/material/Collapse";
 import Typography from "@mui/material/Typography";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Button from "@mui/material/Button";
-import Box from "@mui/material/Box";
 import "../styles/Results.css";
 
+  // have access to the workout data. have access to user id.
+  // hardcode for now but hook up with login
+  // call the addExercise route (need a body with the workout data)
+  // upon success, then call the addToFavorites route (exercise id from the call above plus the userId)
 
 
 
 
-// const ExpandMore = styled((props) => {
-//   const { expand, ...other } = props;
-//   return <IconButton {...other} />;
-// })(({ theme, expand }) => ({
-//   transform: !expand ? "rotate(0deg)" : "rotate(180deg)",
-//   marginLeft: "auto",
-//   transition: theme.transitions.create("transform", {
-//     duration: theme.transitions.duration.shortest
-//   })
-// }));
 
-function Results(props) {
-//   const [expanded, setExpanded] = React.useState(false);
+function Results(props) {  
+const [exerciseId, setExerciseId] = React.useState(null);
+ 
 
-
-//   const handleExpandClick = () => {
-//     setExpanded(!expanded);
-//   }
-
-const [expanded, setExpanded] = React.useState(false);
-  const [exerciseId, setExerciseId] = React.useState(null);
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
-  };
 
   const handleFavoritesClick = async () => {
     alert("hi");
@@ -90,10 +70,12 @@ const [expanded, setExpanded] = React.useState(false);
       });
   };
 
+
   // have access to the workout data. have access to user id.
   // hardcode for now but hook up with login
   // call the addExercise route (need a body with the workout data)
   // upon success, then call the addToFavorites route (exercise id from the call above plus the userId)
+
 
   return (
     <li id={props.data.id} className='card-res'>
@@ -112,7 +94,7 @@ const [expanded, setExpanded] = React.useState(false);
           </CardContent>
         
         < CardActions >
-          {< Button variant="outlined" sx={{ width: '100%' }}>💙</Button>}
+          {< Button variant="outlined" sx={{ width: '100%' }} onClick={handleFavoritesClick}>💙</Button>}
         </CardActions>
       </Card>
     </li>
