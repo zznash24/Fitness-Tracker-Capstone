@@ -14,6 +14,28 @@ import Box from "@mui/material/Box";
 import "../styles/Results.css";
 
 
+
+
+
+// const ExpandMore = styled((props) => {
+//   const { expand, ...other } = props;
+//   return <IconButton {...other} />;
+// })(({ theme, expand }) => ({
+//   transform: !expand ? "rotate(0deg)" : "rotate(180deg)",
+//   marginLeft: "auto",
+//   transition: theme.transitions.create("transform", {
+//     duration: theme.transitions.duration.shortest
+//   })
+// }));
+
+function Results(props) {
+//   const [expanded, setExpanded] = React.useState(false);
+
+
+//   const handleExpandClick = () => {
+//     setExpanded(!expanded);
+//   }
+
 const [expanded, setExpanded] = React.useState(false);
   const [exerciseId, setExerciseId] = React.useState(null);
   const handleExpandClick = () => {
@@ -72,26 +94,6 @@ const [expanded, setExpanded] = React.useState(false);
   // hardcode for now but hook up with login
   // call the addExercise route (need a body with the workout data)
   // upon success, then call the addToFavorites route (exercise id from the call above plus the userId)
-
-
-// const ExpandMore = styled((props) => {
-//   const { expand, ...other } = props;
-//   return <IconButton {...other} />;
-// })(({ theme, expand }) => ({
-//   transform: !expand ? "rotate(0deg)" : "rotate(180deg)",
-//   marginLeft: "auto",
-//   transition: theme.transitions.create("transform", {
-//     duration: theme.transitions.duration.shortest
-//   })
-// }));
-
-function Results(props) {
-//   const [expanded, setExpanded] = React.useState(false);
-
-
-//   const handleExpandClick = () => {
-//     setExpanded(!expanded);
-//   }
 
   return (
     <li id={props.data.id} className='card-res'>
