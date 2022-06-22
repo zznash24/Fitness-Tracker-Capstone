@@ -1,18 +1,8 @@
-/* #Fav-Icon {
-    justify-content: center;
-    align-content: center;
-}
-
-.card-img {
-    height: 35%;
-    width: 35%;
-    align-content: center;
-}
-
-.card-text {
-    text-align: left;
-} */
-
 .card-res {
-    display: flex;
+    margin: 10px;
+    float: left;
+    list-style-type: none;
+    border: solid rgb(151, 151, 151);
 }
+
+

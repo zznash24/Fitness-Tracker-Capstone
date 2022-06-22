@@ -12,7 +12,7 @@ import '../styles/WorkoutApp.css';
 function WorkoutApp() {
     const [values, searchByInputHolder, searchInputTerm, handleChangeFunc] = searchTerms();
     const [result, searchTags, show, handleSubmitFunc] = SearchWork();
-    const [itemsPerPage] = useState(6);
+    const [itemsPerPage] = useState(8);
     const [page, setPage] = React.useState(1);
 
     const indexOfLastItem = page * itemsPerPage;
