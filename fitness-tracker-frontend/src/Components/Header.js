@@ -52,7 +52,7 @@ function Header() {
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
               >
-                <MenuItem onClick={handleClose}>My Account</MenuItem>
+                {/* <MenuItem onClick={handleClose}>My Account</MenuItem> */}
                 <MenuItem onClick={handleClose}>Logout</MenuItem>
               </Menu>
 

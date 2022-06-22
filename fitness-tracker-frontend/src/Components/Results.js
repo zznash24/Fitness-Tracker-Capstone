@@ -33,7 +33,7 @@ function Results(props) {
 //   }
 
   return (
-    <ul id={props.data.id} className='card-res'>
+    <li id={props.data.id} className='card-res'>
       <Card sx={{ maxWidth: 250 }}  variant="outlined" elevation={5}>
       
         <CardHeader variant="h5" component="div" title={props.data.name} />
@@ -52,7 +52,7 @@ function Results(props) {
           {< Button variant="outlined" sx={{ width: '100%' }}>💙</Button>}
         </CardActions>
       </Card>
-    </ul>
+    </li>
 
   );
 }
