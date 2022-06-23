@@ -3,6 +3,7 @@ import WorkoutApp from './Components/WorkoutApp';
 import Header from './Components/Header';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
+import FavoritesList from './Pages/FavoritesList';
 
 function App() {
 
@@ -15,7 +16,8 @@ function App() {
 
     <Container>
       <Grid className='body-grid'>
-        <WorkoutApp />
+        {/* <WorkoutApp /> */}
+        <FavoritesList />
       </Grid>
     </Container>
 
