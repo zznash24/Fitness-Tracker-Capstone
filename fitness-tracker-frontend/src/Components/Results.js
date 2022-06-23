@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
 import CardMedia from "@mui/material/CardMedia";
@@ -23,7 +23,6 @@ const [exerciseId, setExerciseId] = React.useState(null);
 
 
   const handleFavoritesClick = async () => {
-    alert("hi");
     const body = {
       bodyPart: props.data.bodyPart,
       equipment: props.data.equipment,
@@ -47,7 +46,7 @@ const [exerciseId, setExerciseId] = React.useState(null);
         console.log(exerciseId);
       })
       .then(() => {
-        const userId = 1; // hardcoding until login is set up
+        const userId = 3; // hardcoding until login is set up
         console.log("in second then", exerciseId);
         // if userId or exerciseId are null, don't do this api call.. alert or something that tells
         // the user there was an error and can't save to favorites
