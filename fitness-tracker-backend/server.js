@@ -112,6 +112,7 @@ app.post("/exercises/target/addExercise", (req, res) => {
 app.post(
   "/exercises/target/users/:userId/:exerciseId/addToFavorites",
   (req, res) => {
+    const FavoritesList = req.body.favorites;
     const userId = parseInt(req.params.userId);
     const exerciseId = parseInt(req.params.exerciseId);
     models.favorites
