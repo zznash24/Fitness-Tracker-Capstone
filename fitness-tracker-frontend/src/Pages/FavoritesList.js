@@ -2,9 +2,10 @@ import Header from "../Components/Header";
 import StopWatch from "../Components/Stopwatch";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
-import { useEffect, useState } from "react";
+import Paper from '@mui/material/Paper';
+import React from 'react';
 
-function App() {
+function FavoritesList() {
 
   
   return (
@@ -24,4 +25,4 @@ function App() {
   );
 }
 
-export default App;
+export default FavoritesList;
