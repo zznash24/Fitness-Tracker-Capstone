@@ -10,9 +10,6 @@ function FavoritesList() {
   
   return (
     <div className="Fav">
-      <header className="Fav-Header">
-        <Header />
-      </header>
       <Container>
         <Grid item>
           <StopWatch />
