@@ -4,27 +4,22 @@ import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 
-function App() {
 
-    return (
+function FavoritesList() {
+
   
-      <div className="Fav">
-        <header className="Fav-Header">
-          <Header />
-        </header>
-  
+  return (
+    <div className="Fav">
       <Container>
         <Grid item>
           <StopWatch />
         </Grid>
         <Grid item>
-            <Paper>Empty Div to display fav work outs</Paper>
+          <Paper>Empty Div to display fav work outs</Paper>
         </Grid>
       </Container>
-  
-  
-      </div>
-    );
-  }
-  
-  export default App;
+    </div>
+  );
+}
+
+export default FavoritesList;

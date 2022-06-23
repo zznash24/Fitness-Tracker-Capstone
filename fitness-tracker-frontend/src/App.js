@@ -1,3 +1,4 @@
+
 import './App.css';
 import WorkoutApp from './Components/WorkoutApp';
 import Header from './Components/Header';
@@ -8,14 +9,14 @@ import Login from './Pages/Login';
 import FavoritesList from './Pages/FavoritesList';
 import { Routes, Route, Link } from 'react-router-dom';
 
+
 function App() {
-
   return (
-
     <div className="App">
       <header className="App-header">
         <Header />
       </header>
+
       <Login />
       <div className="Nav">
           <Link to="/login">Login</Link>
@@ -35,6 +36,7 @@ function App() {
         <WorkoutApp />
       </Grid>
     </Container>
+
 
 
     </div>

@@ -8,6 +8,7 @@ const app = express();
 
 const models = require('./models');
 const exercise = require('./models/exercises');
+const db = require('./models');
 
 
 app.use(express.json());
@@ -111,6 +112,7 @@ app.post("/exercises/target/addExercise", (req, res) => {
 app.post(
   "/exercises/target/users/:userId/:exerciseId/addToFavorites",
   (req, res) => {
+    const FavoritesList = req.body.favorites;
     const userId = parseInt(req.params.userId);
     const exerciseId = parseInt(req.params.exerciseId);
     models.favorites
@@ -132,6 +134,21 @@ app.post(
       });
   }
 );
+
+app.delete('/favorites/:favorites_id', async (req, res) => {
+  const favorites_id = parseInt(req.params.favorites_id);
+  let favorites = await db.Favorites.findOne({where: {id:favorites_id}}).catch(e => {
+    console.log(e.message)
+  })
+  if(!favorites){
+    console.log('no favorites found');
+  }else {
+    favorites.destroy();
+    res.send('favorite deleted')
+  }
+})
+
+
 
 app.listen(PORT, () => {
   console.log(`app started in port ${PORT}`);
