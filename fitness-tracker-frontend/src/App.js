@@ -17,7 +17,7 @@ function App() {
         <Header />
       </header>
 
-      <Login />
+      {/* <Login /> */}
       <div className="Nav">
           <Link to="/login">Login</Link>
           <Link to="/signup">SignUp</Link>
@@ -27,7 +27,7 @@ function App() {
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
-          <Route path="/FavoritesList" element={<FavoritesList />} />
+          {/* <Route path="/FavoritesList" element={<FavoritesList />} /> */}
         </Routes>
       </div>
 
