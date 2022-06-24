@@ -46,7 +46,7 @@ const [exerciseId, setExerciseId] = React.useState(null);
         console.log(exerciseId);
       })
       .then(() => {
-        const userId = 3; // hardcoding until login is set up
+        const userId = 4; // hardcoding until login is set up
         console.log("in second then", exerciseId);
         // if userId or exerciseId are null, don't do this api call.. alert or something that tells
         // the user there was an error and can't save to favorites
