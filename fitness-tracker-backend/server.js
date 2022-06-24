@@ -31,7 +31,7 @@ app.post("/login", async (req, res) => {
 
       bcrypt.compare(password, user.password, (err, match) => {
         if (match) {
-          res.json({ email: user.username, success: true });
+          res.json({ username: user.username, success: true, id: user.id });
           // res.redirect('/')
         } else {
           res.json({ error: "incorrect password" });
