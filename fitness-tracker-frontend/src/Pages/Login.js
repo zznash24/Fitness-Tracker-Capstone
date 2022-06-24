@@ -35,9 +35,10 @@ function Login ({userId, setUserId, username, setUsername}) {
                  console.log(data)
                  setUsername(data.username)
                  setUserId(data.id)
+                 console.log(userId)
                 //  window.location.replace("/")
                })
-  
+               
             }}>
                 <div>
                   <TextField

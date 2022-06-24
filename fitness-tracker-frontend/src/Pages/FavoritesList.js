@@ -5,9 +5,11 @@ import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import React from 'react';
 import "../styles/FavoritesList.css";
+import SavedExercises from '../Components/savedExercises';
 
-function FavoritesList() {
 
+function FavoritesList({userId}) {
+  console.log(userId)
   
   return (
     <div className="Fav">
@@ -16,7 +18,8 @@ function FavoritesList() {
           <StopWatch />
         </Grid>
         <Grid item>
-          <Paper>Empty Div to display fav work outs</Paper>
+          <Paper><SavedExercises />Empty Div to display fav work outs</Paper>
+          
         </Grid>
       </Container>
     </div>

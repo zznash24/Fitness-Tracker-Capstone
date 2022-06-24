@@ -24,8 +24,8 @@ const SavedExercises = () => {
   };
 
   useEffect(() => {
-    fetch("http://localhost:3001/exercise")
-      .then((res) => res.json())
+    fetch("http://localhost:3001/:userId/:exerciseId/addToFavorites")
+      // .then((res) => res.json())
       .then((data) => {
         console.log(data);
         setExercise(data);
