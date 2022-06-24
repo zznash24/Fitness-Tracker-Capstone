@@ -33,7 +33,8 @@ function App() {
 
     <Container>
       <Grid className='body-grid'>
-        <WorkoutApp />
+        {/* <WorkoutApp /> */}
+        <FavoritesList />
       </Grid>
     </Container>
 

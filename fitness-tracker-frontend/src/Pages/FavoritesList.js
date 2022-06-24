@@ -3,7 +3,8 @@ import StopWatch from '../Components/Stopwatch';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
-
+import React from 'react';
+import "../styles/FavoritesList.css";
 
 function FavoritesList() {
 
