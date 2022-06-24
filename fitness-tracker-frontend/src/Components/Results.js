@@ -18,11 +18,10 @@ import "../styles/Results.css";
 
 
 function Results(props) {  
-const [exerciseId, setExerciseId] = React.useState(null);
- 
 
 
   const handleFavoritesClick = async () => {
+    const userId = props.userId;
     const body = {
       bodyPart: props.data.bodyPart,
       equipment: props.data.equipment,
@@ -42,14 +41,11 @@ const [exerciseId, setExerciseId] = React.useState(null);
       .then((data) => {
         console.log(data);
         console.log(data[0].id);
-        setExerciseId(data[0].id);
+        const exerciseId = data[0].id;
         console.log(exerciseId);
-      })
-      .then(() => {
-        const userId = 3; // hardcoding until login is set up
+     
         console.log("in second then", exerciseId);
-        // if userId or exerciseId are null, don't do this api call.. alert or something that tells
-        // the user there was an error and can't save to favorites
+        console.log(userId);
         fetch(
           `http://localhost:3001/exercises/target/users/${userId}/${exerciseId}/addToFavorites`,
           {

@@ -4,10 +4,8 @@ import Button from '@mui/material/Button';
 
 
 
-function Login () {
+function Login ({userId, setUserId, username, setUsername}) {
   
-  const [username, setUsername] = useState("")
-
     if (username != "") {
       return <h2>Let's go {username}!</h2>
     }
@@ -36,6 +34,7 @@ function Login () {
                }).then(res => res.json()).then(data => {
                  console.log(data)
                  setUsername(data.username)
+                 setUserId(data.id)
                 //  window.location.replace("/")
                })
   
