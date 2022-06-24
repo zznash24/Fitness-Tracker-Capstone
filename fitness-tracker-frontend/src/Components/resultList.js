@@ -1,9 +1,9 @@
 import Results from './Results';
 
-function Listresult({data}) {
+function Listresult({data, userId}) {
 
     const resultList = data.map((value) => 
-        <Results data={value} key={value.id} />
+        <Results data={value} userId={userId} key={value.id} />
     );
 
     return (

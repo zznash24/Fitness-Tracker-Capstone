@@ -9,7 +9,7 @@ import '../styles/WorkoutApp.css';
 
 
 
-function WorkoutApp() {
+function WorkoutApp({userId}) {
     const [values, searchByInputHolder, searchInputTerm, handleChangeFunc] = searchTerms();
     const [result, searchTags, show, handleSubmitFunc] = SearchWork();
     const [itemsPerPage] = useState(8);
@@ -22,7 +22,7 @@ function WorkoutApp() {
     const currentResults = result.slice(indexOfFirstItem, indexOfLastItem);
     let pagination;
 
-
+console.log("WorkoutApp", userId)
     
 
     if (!show) {
@@ -33,7 +33,7 @@ function WorkoutApp() {
         pagination = <PageN itemsPerPage={itemsPerPage} totalItems={result.length} page={page} setPage={setPage} />
       }
 
-      const resultList = <Listresult data={currentResults} searchTags={searchTags} numResults={result.length} />;
+      const resultList = <Listresult userId={userId} data={currentResults} searchTags={searchTags} numResults={result.length} />;
 return (
     <div>
         <WorkSearch

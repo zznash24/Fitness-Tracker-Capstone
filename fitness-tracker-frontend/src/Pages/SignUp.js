@@ -38,9 +38,10 @@ class SignUp extends Component {
       this.setState({
         user: data.username
       })
+      window.location.replace("/")
     })
 
-    window.location.replace("/")
+    
   }
 
   render(){
