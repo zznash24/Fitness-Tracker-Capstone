@@ -21,7 +21,7 @@ function App() {
         <Header />
       </header>
 
-      <Login />
+      {/* <Login /> */}
       <div className="Nav">
           <Link to="/login">Login</Link>
           <Link to="/signup">SignUp</Link>
@@ -31,7 +31,9 @@ function App() {
         <Routes>
           <Route path="/login" element={<Login username={username} setUsername={setUsername} userId={userId} setUserId={setUserId} />} />
           <Route path="/signup" element={<SignUp />} />
+
           <Route path="/FavoritesList" element={<FavoritesList userId={userId} />} />
+
         </Routes>
       </div>
 
