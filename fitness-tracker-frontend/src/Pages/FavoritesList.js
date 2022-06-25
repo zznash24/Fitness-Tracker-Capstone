@@ -1,4 +1,3 @@
-import Header from '../Components/Header';
 import StopWatch from '../Components/Stopwatch';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
@@ -8,6 +7,16 @@ import "../styles/FavoritesList.css";
 
 function FavoritesList() {
 
+  fetch('http://localhost:3001/favorites/', {
+      method: 'GET',
+      headers: {
+        'Content-type': 'application/json'
+      },
+     
+    }).then(res => res.json()).then(data => {
+      console.log(data)
+      
+    })
   
   return (
     <div className="Fav">

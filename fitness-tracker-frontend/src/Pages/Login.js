@@ -1,12 +1,16 @@
 import { useState } from "react";
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import {Routes, Route, useNavigate} from 'react-router-dom';
 
 
 
 function Login ({userId, setUserId, username, setUsername}) {
-  
-    if (username != "") {
+  const navigate = useNavigate();
+
+
+
+    if (username) {
       return <h2>Let's go {username}!</h2>
     }
     else {
@@ -35,7 +39,7 @@ function Login ({userId, setUserId, username, setUsername}) {
                  console.log(data)
                  setUsername(data.username)
                  setUserId(data.id)
-                //  window.location.replace("/")
+                 navigate('/dashboard');
                })
   
             }}>

@@ -1,29 +1,30 @@
 import React from 'react';
-// import { useNavigate } from "react-router-dom";
+import {Routes, Route, useNavigate} from 'react-router-dom';
 import Button from '@mui/material/Button';
-import Container from '@mui/system/Container';
+// import Container from '@mui/system/Container';
+import Grid from '@mui/material/Grid';
 
 
 function Footer() {
   
-  // let navigate = useNavigate(); 
-  // const routeChange = () =>{ 
-  //   let path = `/favorites`; 
-  //   navigate(path);
-  // }
+  const navigate = useNavigate(); 
+  const workoutroute = () =>{ 
+    let path = '/favorites'; 
+    navigate(path);
+  }
   
   return (
      <div className="save-work">
-      <Container>       
+      <Grid container direction="row-reverse" justifyContent="flex-start" alignItems="flex-end">       
           <Button 
           variant='contained' 
-          sx={{ width: '50%' }}
+          sx={{ width: '25%' }}
           className="px-4"
-          // onClick={routeChange}
+          onClick={workoutroute}
           >
               Go To Your Workout!
             </Button>
-       </Container>
+       </Grid>
     </div>
   );
 }
