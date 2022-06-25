@@ -29,14 +29,14 @@ function App() {
         { !userId ?<Link to="/login">Login</Link>: ''}
         { !userId ?<Link to="/signup">SignUp</Link>: ''}
         { userId ?<Link to="/favorites">Favorites</Link>: ''}
-        { userId ?<Link to="/dashboard">Search for Workouts</Link>: !''}
+        { userId ?<Link to="/dashboard">Search for Workouts</Link>: ''}
       </div>
       <div>
         <Routes>
           <Route path="/login" element={<Login username={username} setUsername={setUsername} userId={userId} setUserId={setUserId} />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/dashboard" element={<WorkoutDash userId={userId} />} />
-          <Route path="/favorites" element={<FavoritesList userId={userId} />} />
+         {userId ? <Route path="/favorites" element={<FavoritesList userId={userId} />} />: ''}
 
         </Routes>
       </div>

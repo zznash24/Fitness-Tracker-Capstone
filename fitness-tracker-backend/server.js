@@ -1,15 +1,12 @@
 const PORT = process.env.PORT || 3001;
-const express = require('express');
-const cors = require('cors')
-const bcrypt = require('bcrypt');
+const express = require("express");
+const cors = require("cors");
+const bcrypt = require("bcrypt");
 const app = express();
 
-
-
-const models = require('./models');
-const exercise = require('./models/exercises');
-const db = require('./models');
-
+const models = require("./models");
+const exercise = require("./models/exercises");
+const db = require("./models");
 
 app.use(express.json());
 app.use(cors());
@@ -80,8 +77,6 @@ app.post("/signup", (req, res) => {
   });
 });
 
-
-
 app.post("/exercises/target/addExercise", (req, res) => {
   const { bodyPart, equipment, gifURL, name, target } = req.body;
   console.log("req.body", req.body);
@@ -139,27 +134,28 @@ app.get("/favorites/:userId", async (req, res) => {
   let userId = req.params.userId;
   let favorites = await db.favorites.findAll({
     where: {
-      userId: userId
+      userId: userId,
     },
-      include: db.exercises
-  })
-  res.json({ favorites:favorites, Hello: "Mom" });
+    include: db.exercises,
+  });
+
+  res.json({ favorites: favorites, Hello: "Mom" });
 });
 
-app.delete('/favorites/:favorites_id', async (req, res) => {
+app.delete("/favorites/:favorites_id", async (req, res) => {
   const favorites_id = parseInt(req.params.favorites_id);
-  let favorites = await db.Favorites.findOne({where: {id:favorites_id}}).catch(e => {
-    console.log(e.message)
-  })
-  if(!favorites){
-    console.log('no favorites found');
-  }else {
+  let favorites = await db.Favorites.findOne({
+    where: { id: favorites_id },
+  }).catch((e) => {
+    console.log(e.message);
+  });
+  if (!favorites) {
+    console.log("no favorites found");
+  } else {
     favorites.destroy();
-    res.send('favorite deleted')
+    res.send("favorite deleted");
   }
-})
-
-
+});
 
 app.listen(PORT, () => {
   console.log(`app started in port ${PORT}`);

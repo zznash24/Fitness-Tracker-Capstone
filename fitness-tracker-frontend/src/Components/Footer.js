@@ -15,7 +15,7 @@ function Footer() {
   
   return (
      <div className="save-work">
-      <Grid container direction="row-reverse" justifyContent="flex-start" alignItems="flex-end">       
+      {/* <Grid container direction="row-reverse" justifyContent="flex-start" alignItems="flex-end">       
           <Button 
           variant='contained' 
           sx={{ width: '25%' }}
@@ -24,7 +24,7 @@ function Footer() {
           >
               Go To Your Workout!
             </Button>
-       </Grid>
+       </Grid> */}
     </div>
   );
 }
