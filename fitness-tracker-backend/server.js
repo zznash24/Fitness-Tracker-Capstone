@@ -80,9 +80,7 @@ app.post("/signup", (req, res) => {
   });
 });
 
-app.get("/", (req, res) => {
-  res.json({ Hello: "Mom" });
-});
+
 
 app.post("/exercises/target/addExercise", (req, res) => {
   const { bodyPart, equipment, gifURL, name, target } = req.body;
@@ -134,6 +132,19 @@ app.post(
       });
   }
 );
+
+//
+
+app.get("/favorites/:userId", async (req, res) => {
+  let userId = req.params.userId;
+  let favorites = await db.favorites.findAll({
+    where: {
+      userId: userId
+    },
+      include: db.exercises
+  })
+  res.json({ favorites:favorites, Hello: "Mom" });
+});
 
 app.delete('/favorites/:favorites_id', async (req, res) => {
   const favorites_id = parseInt(req.params.favorites_id);
