@@ -26,10 +26,12 @@ function App() {
       {/* <Login /> */}
 
       <div className="Nav">
-        { !userId ?<Link to="/login">Login</Link>: ''}
-        { !userId ?<Link to="/signup">SignUp</Link>: ''}
-        { userId ?<Link to="/favorites">Favorites</Link>: ''}
-        { userId ?<Link to="/dashboard">Search for Workouts</Link>: ''}
+        <ul>
+        { !userId ?<li><Link to="/login">Login</Link></li>: ''}
+        { !userId ?<li><Link to="/signup">SignUp</Link></li>: ''}
+        { userId ?<li><Link to="/favorites">Favorites</Link></li>: ''}
+        { userId ?<li><Link to="/dashboard">Search for Workouts</Link></li>: ''}
+        </ul>
       </div>
       <div>
         <Routes>

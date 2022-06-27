@@ -1,11 +1,9 @@
 import StopWatch from "../Components/Stopwatch";
-import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import React, { useEffect, useState } from "react";
 import "../styles/FavoritesList.css";
 import SavedExercises from "../Components/savedExercises";
-import Card from "../Components/Results";
 import Listresult from "../Components/resultList";
 import '../styles/WorkoutApp.css';
 
@@ -31,24 +29,20 @@ const FavoritesList = ({ userId }) => {
 
   return (
     <div className="Fav">
-      <Container>
-        <Grid item>
+      <Grid container spacing={2}>
+        <Grid item xs={4}>
           <StopWatch />
         </Grid>
-        <Grid item>
-          <Paper>
+        <Grid item xs={8}>
+          <Paper >
             <SavedExercises />
-            {/* {favorites.map((favorite, index) => (
-              <Card data={favorite} key={index} />
-            ))} */}
-            <div className='cards' container spacing={3}>
-            <Listresult data={favorites} userId={userId} />
+            <div className='cards' container>
+              <Listresult data={favorites} userId={userId} />
 
-          </div>
-            
+            </div>
           </Paper>
         </Grid>
-      </Container>
+      </Grid>
     </div>
   );
 };
