@@ -72,7 +72,8 @@ app.post("/signup", (req, res) => {
       })
       .catch((e) => {
         console.log(e);
-        res.json({ error: e });
+        res.status(500).json({ error: e,
+          success: false, });
       });
   });
 });
@@ -156,6 +157,7 @@ app.delete("/favorites/:favorites_id", async (req, res) => {
     res.send("favorite deleted");
   }
 });
+
 
 app.listen(PORT, () => {
   console.log(`app started in port ${PORT}`);
