@@ -1,8 +1,5 @@
 import './App.css';
-import WorkoutApp from './Components/WorkoutApp';
 import Header from './Components/Header';
-import Container from '@mui/material/Container';
-import Grid from '@mui/material/Grid';
 import SignUp from './Pages/SignUp';
 import Login from './Pages/Login';
 import FavoritesList from './Pages/FavoritesList';
@@ -20,7 +17,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Header />
+        <Header username={username} setUsername={setUsername} userId={userId} setUserId={setUserId} />
       </header>
 
       {/* <Login /> */}

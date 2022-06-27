@@ -1,23 +1,15 @@
-import { useState } from "react";
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import {Routes, Route, useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
 
 function Login ({userId, setUserId, username, setUsername}) {
   const navigate = useNavigate();
 
-
-
-    if (username) {
-      return <h2>Let's go {username}!</h2>
-    }
-    else {
       return (
         <div className="wrapper">
             <h3>Login</h3>
-           
             <form action="#" onSubmit={(e) => {
                e.preventDefault();
                console.log(e);
@@ -66,6 +58,6 @@ function Login ({userId, setUserId, username, setUsername}) {
         </div>
       );
     }
-  }
+  
 
 export default Login;
