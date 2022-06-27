@@ -1,6 +1,7 @@
-import { Component, Redirect } from "react";
+import { Component } from "react";
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+
 
 class SignUp extends Component {
 

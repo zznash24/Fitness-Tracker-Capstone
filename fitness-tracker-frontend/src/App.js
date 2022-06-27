@@ -1,8 +1,5 @@
 import './App.css';
-import WorkoutApp from './Components/WorkoutApp';
 import Header from './Components/Header';
-import Container from '@mui/material/Container';
-import Grid from '@mui/material/Grid';
 import SignUp from './Pages/SignUp';
 import Login from './Pages/Login';
 import FavoritesList from './Pages/FavoritesList';
@@ -20,16 +17,18 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Header />
+        <Header username={username} setUsername={setUsername} userId={userId} setUserId={setUserId} />
       </header>
 
       {/* <Login /> */}
 
       <div className="Nav">
-        { !userId ?<Link to="/login">Login</Link>: ''}
-        { !userId ?<Link to="/signup">SignUp</Link>: ''}
-        { userId ?<Link to="/favorites">Favorites</Link>: ''}
-        { userId ?<Link to="/dashboard">Search for Workouts</Link>: ''}
+        <ul>
+        { !userId ?<li><Link to="/login">Login</Link></li>: ''}
+        { !userId ?<li><Link to="/signup">SignUp</Link></li>: ''}
+        { userId ?<li><Link to="/favorites">Favorites</Link></li>: ''}
+        { userId ?<li><Link to="/dashboard">Search for Workouts</Link></li>: ''}
+        </ul>
       </div>
       <div>
         <Routes>
