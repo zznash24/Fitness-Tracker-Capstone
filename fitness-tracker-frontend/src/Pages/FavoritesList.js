@@ -7,7 +7,7 @@ import "../styles/FavoritesList.css";
 import SavedExercises from "../Components/savedExercises";
 import Card from "../Components/Results";
 import Listresult from "../Components/resultList";
-import '../styles/WorkoutApp.css';
+import "../styles/WorkoutApp.css";
 
 const FavoritesList = ({ userId }) => {
   const [favorites, setFavorites] = useState([]);
@@ -41,11 +41,9 @@ const FavoritesList = ({ userId }) => {
             {/* {favorites.map((favorite, index) => (
               <Card data={favorite} key={index} />
             ))} */}
-            <div className='cards' container spacing={3}>
-            <Listresult data={favorites} userId={userId} />
-
-          </div>
-            
+            <div className="cards" container spacing={3}>
+              <Listresult data={favorites} userId={userId} />
+            </div>
           </Paper>
         </Grid>
       </Container>
