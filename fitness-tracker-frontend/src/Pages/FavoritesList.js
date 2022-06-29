@@ -3,7 +3,7 @@ import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import React, { useEffect, useState } from "react";
 import "../styles/FavoritesList.css";
-import SavedExercises from "../Components/savedExercises";
+// import SavedExercises from "../Components/savedExercises";
 import Listresult from "../Components/resultList";
 import "../styles/WorkoutApp.css";
 
@@ -25,7 +25,7 @@ const FavoritesList = ({ userId }) => {
         });
         setFavorites(favoritesLists);
       });
-  });
+  }, [userId]);
 
   return (
     <div className="Fav">
@@ -35,8 +35,8 @@ const FavoritesList = ({ userId }) => {
         </Grid>
         <Grid item xs={8}>
           <Paper>
-            <SavedExercises />
-            <div className="cards" container>
+            {/* <SavedExercises /> */}
+            <div className="cards">
               <Listresult data={favorites} userId={userId} />
             </div>
           </Paper>

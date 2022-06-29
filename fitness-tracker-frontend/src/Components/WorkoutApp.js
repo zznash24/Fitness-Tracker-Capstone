@@ -55,7 +55,7 @@ function WorkoutApp({ userId }) {
         searchInputTerm={searchInputTerm}
         values={values}
       />
-      <div className="cards" container spacing={3}>
+      <div className="cards" spacing={3}>
         {resultList}
       </div>
       <hr />
