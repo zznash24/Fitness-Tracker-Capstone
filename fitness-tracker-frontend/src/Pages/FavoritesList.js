@@ -25,7 +25,7 @@ const FavoritesList = ({ userId }) => {
         });
         setFavorites(favoritesLists);
       });
-  }, []);
+  });
 
   return (
     <div className="Fav">
@@ -34,11 +34,10 @@ const FavoritesList = ({ userId }) => {
           <StopWatch />
         </Grid>
         <Grid item xs={8}>
-          <Paper >
+          <Paper>
             <SavedExercises />
-            <div className='cards' container>
+            <div className="cards" container>
               <Listresult data={favorites} userId={userId} />
-
             </div>
           </Paper>
         </Grid>

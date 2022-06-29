@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../styles/StopWatch.css';
 
 
@@ -29,7 +29,7 @@ function StopWatch() {
                 <span>{('0' + ((time / 10) % 100)).slice(-2)}</span>
             </div>
             <div>
-                {!timerOn && time == 0 && (
+                {!timerOn && time === 0 && (
                     <button onClick={() => setTimeOn(true)}>Start</button>
                 )}
                 {timerOn && (

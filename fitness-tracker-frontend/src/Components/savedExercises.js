@@ -32,38 +32,38 @@ const SavedExercises = () => {
       });
   }, []);
 
-  const filterRender = () => {
-    if (setExercise === "All Types") {
-      return exercise.map((exercise) => (
-        <Card
-          bodyPart={exercise.bodyPart}
-          equipment={exercise.equipment}
-          gifURL={exercise.gifURL}
-          name={exercise.name}
-          target={exercise.target}
-          onClick={(e) => handleExerciseTypeClick(exercise.id, e)}
-        />
-      ));
-    } else {
-      const filteredExercise = exercise.filter(
-        (exercise) => exercise.type === exerciseType
-      );
-      return filteredExercise.length > 0 ? (
-        filteredExercise.map((exercise) => (
-          <Card
-            bodyPart={exercise.bodyPart}
-            equipment={exercise.equipment}
-            gifURL={exercise.gifURL}
-            name={exercise.name}
-            target={exercise.target}
-            onClick={(e) => handleExerciseTypeClick(exercise.id, e)}
-          />
-        ))
-      ) : (
-        <p className="no-exercises">No Exercises</p>
-      );
-    }
-  };
+  // const filterRender = () => {
+  //   if (setExercise === "All Types") {
+  //     return exercise.map((exercise) => (
+  //       <Card
+  //         bodyPart={exercise.bodyPart}
+  //         equipment={exercise.equipment}
+  //         gifURL={exercise.gifURL}
+  //         name={exercise.name}
+  //         target={exercise.target}
+  //         onClick={(e) => handleExerciseTypeClick(exercise.id, e)}
+  //       />
+  //     ));
+  //   } else {
+  //     const filteredExercise = exercise.filter(
+  //       (exercise) => exercise.type === exerciseType
+  //     );
+  //     return filteredExercise.length > 0 ? (
+  //       filteredExercise.map((exercise) => (
+  //         <Card
+  //           bodyPart={exercise.bodyPart}
+  //           equipment={exercise.equipment}
+  //           gifURL={exercise.gifURL}
+  //           name={exercise.name}
+  //           target={exercise.target}
+  //           onClick={(e) => handleExerciseTypeClick(exercise.id, e)}
+  //         />
+  //       ))
+  //     ) : (
+  //       <p className="no-exercises">No Exercises</p>
+  //     );
+  //   }
+  // };
 };
 
 export default SavedExercises;
