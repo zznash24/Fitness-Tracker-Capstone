@@ -10,7 +10,7 @@ import "../styles/WorkoutApp.css";
 const FavoritesList = ({ userId }) => {
   const [favorites, setFavorites] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:3001/favorites/${userId}`)
+    fetch(`https://the-workout-zone.herokuapp.com/favorites/${userId}`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

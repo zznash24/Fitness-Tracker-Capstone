@@ -28,7 +28,7 @@ class SignUp extends Component {
       password: password //bcrypt
     }
 
-    fetch('http://localhost:3001/signup', {
+    fetch('https://the-workout-zone.herokuapp.com/signup', {
       method: 'POST',
       headers: {
         'Content-type': 'application/json'

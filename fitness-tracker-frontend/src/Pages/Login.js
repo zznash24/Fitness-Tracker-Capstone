@@ -21,7 +21,7 @@ function Login ({userId, setUserId, username, setUsername}) {
                  password: password //bcrypt
                }
              
-               fetch('http://localhost:3001/login', {
+               fetch('https://the-workout-zone.herokuapp.com/login', {
                  method: 'POST',
                  headers: {
                    'Content-type': 'application/json'
