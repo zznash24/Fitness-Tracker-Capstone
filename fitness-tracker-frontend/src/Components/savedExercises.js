@@ -1,36 +1,36 @@
-import { useState, useEffect } from "react";
-import Card from "./Results";
+// import { useState, useEffect } from "react";
+// import Card from "./Results";
 
-const SavedExercises = () => {
-  const [exerciseType, setExerciseType] = useState("All Types");
-  const [exercise, setExercise] = useState([]);
+// const SavedExercises = () => {
+//   const [exerciseType, setExerciseType] = useState("All Types");
+//   const [exercise, setExercise] = useState([]);
 
-  const handleExerciseTypeClick = (id, e) => {
-    console.log(e.target.value);
-    setExerciseType(e.target.value);
-    const body = { exercise: e.target.value };
-    fetch(`http://localhost:3001/Exercise/1/${id}`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(body),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        setExercise(data);
-      });
-  };
+//   const handleExerciseTypeClick = (id, e) => {
+//     console.log(e.target.value);
+//     setExerciseType(e.target.value);
+//     const body = { exercise: e.target.value };
+//     fetch(`http://localhost:3001/Exercise/1/${id}`, {
+//       method: "POST",
+//       headers: {
+//         "Content-Type": "application/json",
+//       },
+//       body: JSON.stringify(body),
+//     })
+//       .then((res) => res.json())
+//       .then((data) => {
+//         console.log(data);
+//         setExercise(data);
+//       });
+//   };
 
-  useEffect(() => {
-    fetch("http://localhost:3001/:userId/:exerciseId/addToFavorites")
-      // .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        setExercise(data);
-      });
-  }, []);
+//   useEffect(() => {
+//     fetch("http://localhost:3001/:userId/:exerciseId/addToFavorites")
+//       // .then((res) => res.json())
+//       .then((data) => {
+//         console.log(data);
+//         setExercise(data);
+//       });
+//   }, []);
 
   // const filterRender = () => {
   //   if (setExercise === "All Types") {
@@ -64,6 +64,6 @@ const SavedExercises = () => {
   //     );
   //   }
   // };
-};
+// };
 
-export default SavedExercises;
+// export default SavedExercises;
