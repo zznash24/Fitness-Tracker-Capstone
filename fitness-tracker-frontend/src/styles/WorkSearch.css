@@ -1,0 +1,11 @@
+.Form-paper {
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px 0;
+  }
+  
+  .Form {
+    width: 90%;
+    margin: auto; 
+    display: flex;
+  }

@@ -1,0 +1,10 @@
+.cards li {
+    margin: 10px;
+    float: left;
+    list-style-type: none;
+    border: solid rgb(151, 151, 151);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+

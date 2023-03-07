@@ -21,8 +21,6 @@ function WorkoutApp({ userId }) {
   const currentResults = result.slice(indexOfFirstItem, indexOfLastItem);
   let pagination;
 
-  console.log("WorkoutApp", userId);
-
   if (!show) {
     pagination = null;
   } else if (result.length === 0) {
@@ -64,5 +62,7 @@ function WorkoutApp({ userId }) {
     </div>
   );
 }
+
+
 
 export default WorkoutApp;
