@@ -13,7 +13,8 @@
     "sequelize": "^6.20.1"
   },
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "dev": "node server.js"
   },
   "name": "fitness-tracker-backend",
   "description": "The Workout Zone is built for anyone and everyone to have access to proper exercise instruction without the cost of a gym membership or a coach.  It was built using React, Node, Express, Sequelize, JavaScript, HTML, CSS, and a little blood and sweat!",
