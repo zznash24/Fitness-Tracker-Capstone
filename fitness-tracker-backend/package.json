@@ -13,7 +13,7 @@
     "sequelize": "^6.20.1"
   },
   "scripts": {
-    "start": "npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all && node server.js",
+    "start": "npx sequelize-cli db:migrate && node server.js",
     "dev": "node server.js"
   },
   "name": "fitness-tracker-backend",
