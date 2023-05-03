@@ -10,7 +10,7 @@ import "../styles/WorkoutApp.css";
 const FavoritesList = ({ userId }) => {
   const [favorites, setFavorites] = useState([]);
   useEffect(() => {
-    fetch(`https://the-workout-zone.herokuapp.com/favorites/${userId}`)
+    fetch(`https://fitness-capstone-c6g7.onrender.com/favorites/${userId}`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

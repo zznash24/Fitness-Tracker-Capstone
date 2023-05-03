@@ -1,4 +1,4 @@
-import WorkoutApp from "./components/Workout";
+import WorkoutApp from "./Components/WorkoutApp";
 import './App.css';
 import Header from './Components/Header';
 import SignUp from './Pages/SignUp';

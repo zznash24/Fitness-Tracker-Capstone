@@ -21,7 +21,7 @@ function Login ({userId, setUserId, username, setUsername}) {
                  password: password //bcrypt
                }
              
-               fetch('https://the-workout-zone.herokuapp.com/login', {
+               fetch('https://fitness-capstone-c6g7.onrender.com/login', {
                  method: 'POST',
                  headers: {
                    'Content-type': 'application/json'

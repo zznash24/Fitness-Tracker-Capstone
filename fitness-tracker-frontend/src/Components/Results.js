@@ -21,7 +21,7 @@ import "../styles/Results.css";
         target: props.data.target,
       };
       //what happens if this fails?
-      fetch("https://the-workout-zone.herokuapp.com/exercises/target/addExercise", {
+      fetch("https://fitness-capstone-c6g7.onrender.com/exercises/target/addExercise", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -39,7 +39,7 @@ import "../styles/Results.css";
           console.log("in second then", exerciseId);
           console.log(userId);
           fetch(
-            `https://the-workout-zone.herokuapp.com/exercises/target/users/${userId}/${exerciseId}/addToFavorites`,
+            `https://fitness-capstone-c6g7.onrender.com/exercises/target/users/${userId}/${exerciseId}/addToFavorites`,
             {
               method: "POST",
               headers: {
