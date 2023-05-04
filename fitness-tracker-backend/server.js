@@ -13,6 +13,10 @@ app.use(cors());
 
 //--> Login post request <--//
 
+app.get('/', async (req, res) => {
+  res.render('index', { title: 'Workout Tracker' });
+})
+
 app.post("/login", async (req, res) => {
   const { username, password } = req.body;
 
