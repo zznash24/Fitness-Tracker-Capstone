@@ -13,8 +13,8 @@ app.use(cors());
 
 //--> Login post request <--//
 
-app.get('/', async (req, res) => {
-  res.render('index', { title: 'Workout Tracker' });
+app.get('/', function(req, res) {
+  res.json( {true: successful} );
 })
 
 app.post("/login", async (req, res) => {
