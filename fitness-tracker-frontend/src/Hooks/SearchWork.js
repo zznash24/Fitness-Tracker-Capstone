@@ -6,40 +6,45 @@ const startSearchTerms = {
 };
 
 function SearchWork() {
-    const [result, setResult] = useState([]);
-    const [searchTags, setSearchTags] = useState(startSearchTerms);
-    const [show, setShow] = useState(false);
-    
-    const handleSubmitFunc = (valuesParam, searchType, searchParam) => { 
-            console.log(searchType, searchParam);
-            console.log(valuesParam);
-            setShow(true)
-            setSearchTags({ searchedTerm: valuesParam.searchTerm, searchedBy: valuesParam.searchBy });
+  const [result, setResult] = useState([]);
+  const [searchTags, setSearchTags] = useState(startSearchTerms);
+  const [show, setShow] = useState(false);
 
-            const url = `https://exercisedb.p.rapidapi.com/exercises/${valuesParam.searchBy}/${valuesParam.searchTerm}`;
-            console.log(url);
+  const handleSubmitFunc = (valuesParam, searchType, searchParam) => {
+    console.log(searchType, searchParam);
+    console.log(valuesParam);
+    setShow(true);
+    setSearchTags({
+      searchTerm: valuesParam.searchTerm,
+      searchBy: valuesParam.searchBy,
+    });
 
-        const options = {
-            method: 'GET',
-            headers: {
-                'x-rapidapi-host': 'exercisedb.p.rapidapi.com',
-                'x-rapidapi-key': 'd7e64b9d96mshab31c4df752e9cep1df2dfjsncf567034bfc0'
-            }
-        };
-        
-        fetch(url, options)
-	        .then(res => res.json())
-                      
+    const url = `https://exercisedb.p.rapidapi.com/exercises/${valuesParam.searchBy}/${valuesParam.searchTerm}`;
+    console.log(url);
 
-	        .then(function (json) {
-                setResult(json); 
-                
-                console.log(result)
-                console.log(json)})
-            
-	        .catch(err => console.error('error:' + err));
-    }
+    const options = {
+      method: "GET",
+      headers: {
+        "x-rapidapi-host": "exercisedb.p.rapidapi.com",
+        "x-rapidapi-key": "d7e64b9d96mshab31c4df752e9cep1df2dfjsncf567034bfc0",
+      },
+    };
 
+    fetch(url, options)
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return res.json();
+      })
+      .then((json) => {
+        setResult(json);
+        console.log(json);
+      })
+      .catch((err) => {
+        console.error("Error:", err.message);
+      });
+  };
 
   return [result, searchTags, show, handleSubmitFunc];
 }
