@@ -14,7 +14,7 @@ app.use(cors());
 //--> Login post request <--//
 
 app.get('/', function(req, res) {
-  res.json( {true: successful} );
+  res.json( {true: true} );
 })
 
 app.post("/login", async (req, res) => {
