@@ -39,7 +39,7 @@ import "../styles/Results.css";
           console.log("in second then", exerciseId);
           console.log(userId);
           fetch(
-            `https://fitness-capstone-c6g7.onrender.com/exercises/target/users/${userId}/${exerciseId}/addToFavorites`,
+            `https://workout-zone-capstone.vercel.app/exercises/target/users/${userId}/${exerciseId}/addToFavorites`,
             {
               method: "POST",
               headers: {

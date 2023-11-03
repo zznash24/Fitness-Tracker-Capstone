@@ -9,7 +9,7 @@ const SavedExercises = () => {
     console.log(e.target.value);
     setExerciseType(e.target.value);
     const body = { exercise: e.target.value };
-    fetch(`http://localhost:3001/Exercise/1/${id}`, {
+    fetch(`https://workout-zone-capstone.vercel.app/Exercise/1/${id}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -24,7 +24,7 @@ const SavedExercises = () => {
   };
 
   useEffect(() => {
-    fetch("http://localhost:3001/:userId/:exerciseId/addToFavorites")
+    fetch("https://workout-zone-capstone.vercel.app/:userId/:exerciseId/addToFavorites")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
