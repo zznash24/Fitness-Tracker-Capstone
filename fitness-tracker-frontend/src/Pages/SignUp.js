@@ -28,7 +28,7 @@ class SignUp extends Component {
       password: password //bcrypt
     }
 
-    fetch('https://fitness-capstone-c6g7.onrender.com/signup', {
+    fetch('https://workout-zone-capstone.vercel.app/signup', {
       method: 'POST',
       headers: {
         'Content-type': 'application/json'

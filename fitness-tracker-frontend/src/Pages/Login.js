@@ -21,7 +21,7 @@ function Login ({userId, setUserId, username, setUsername}) {
                  password: password //bcrypt
                }
              
-               fetch('https://fitness-capstone-c6g7.onrender.com/login', {
+               fetch('https://workout-zone-capstone.vercel.app/login', {
                  method: 'POST',
                  headers: {
                    'Content-type': 'application/json'
