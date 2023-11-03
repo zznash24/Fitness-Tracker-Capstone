@@ -9,6 +9,12 @@ const exercise = require("./models/exercises");
 const db = require("./models");
 
 app.use(express.json());
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', 'https://workout-zone-capstone-ctb8bfm8z-zznash24s-projects.vercel.app/');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+  res.header('Access-Control-Allow-Headers', 'Content-Type');
+  next();
+});
 app.use(cors());
 
 //--> Login post request <--//
